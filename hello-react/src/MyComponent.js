@@ -1,7 +1,16 @@
 import React from "react";
 
-const MyComponent = () => {
-    return <div>My beautiful, the first component!!!</div>;
+const MyComponent = props => {
+    return (
+        <div>
+            Hello, my name is {props.name}. <br />
+            children value is {props.children}.
+        </div>
+    );
+};
+
+MyComponent.defaultProps = {
+    name: 'default'
 };
 
 export default MyComponent;
