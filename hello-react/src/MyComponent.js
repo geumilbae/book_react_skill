@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const MyComponent = ({name, children}) => {
     return (
         <div>
-            Hello, my name is {name}. <br />
+            Hello, my name is {name}. <br/>
             children value is {children}.
         </div>
     );
@@ -11,6 +12,10 @@ const MyComponent = ({name, children}) => {
 
 MyComponent.defaultProps = {
     name: 'default'
+};
+
+MyComponent.propTypes = {
+    name: PropTypes.string
 };
 
 export default MyComponent;
