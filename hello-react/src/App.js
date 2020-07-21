@@ -3,10 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+    const name = 'Reeeeact';
     return (
         <>
-            <h1>Hi, React!!</h1>
-            <h2>Are you alright?</h2>
+            {name === 'React' ? (
+                <h1>{name} is React!!</h1>
+            ) : (
+                <h2>{name} is not React.</h2>
+            )}
         </>
   );
 }
