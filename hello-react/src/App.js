@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
     const name = undefined;
-    return name || "returning value is undefined.";
+    return (<div>{name || 'React'}</div>);
 }
 
 export default App;
