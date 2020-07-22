@@ -1,14 +1,9 @@
 import React from "react";
 
 const IterationSample = () => {
-    return (
-        <ul>
-            <li>Snowman</li>
-            <li>Ice</li>
-            <li>Snow</li>
-            <li>Wind</li>
-        </ul>
-    );
+    const names = ['Snowman', 'Ice', 'Snow', 'Wind'];
+    const nameList = names.map((name, index) => <li key={index}>{name}</li>);
+    return <ul>{nameList}</ul>;
 };
 
 export default IterationSample;
