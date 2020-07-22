@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
 
 class Counter extends Component {
-    constructor(props) {
-        super(props);
-        // set initial state
-        this.state = {
-            number: 0,
-            fixedNumber: 0
-        };
-    }
+    // set initial state
+    state = {
+        number: 0,
+        fixedNumber: 0
+    };
     render() {
         const {number, fixedNumber} = this.state;  // use this.state to lookup state
         return (
