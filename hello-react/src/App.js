@@ -1,10 +1,12 @@
 import React from "react";
 import ValidationSample from "./ValidationSample";
 
-const App = () => {
-    return (
-        <ValidationSample />
-    );
-};
+class App extends React.Component {
+    render() {
+        return (
+            <ValidationSample />
+        );
+    }
+}
 
 export default App;
