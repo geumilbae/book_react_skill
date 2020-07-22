@@ -1,15 +1,26 @@
 import React, {useState} from "react";
 
 const EventPractice = () => {
-    const [username, setUsername] = useState('');
-    const [message, setMessage] = useState('');
-    const onChangeUsername = e => setUsername(e.target.value);
-    const onChangeMessage = e => setMessage(e.target.value);
+    const [form, setForm] = useState({
+        username: '',
+        message: ''
+    })
+    const {username, message} = form;
+
+    const onChange = e => {
+        const nextForm = {
+            ...form,  // copy the inside of the form instance
+            [e.target.name]: e.target.value  // modify values you want
+        };
+        setForm(nextForm);
+    };
 
     const onClick = () => {
         alert(`${username}: ${message}`);
-        setUsername('');
-        setMessage('');
+        setForm({
+            username: '',
+            message: ''
+        })
     };
 
     const onKeyPress = e => {
@@ -26,14 +37,14 @@ const EventPractice = () => {
                 name="username"
                 placeholder="User Name"
                 value={username}
-                onChange={onChangeUsername}
+                onChange={onChange}
             />
             <input
                 type="text"
                 name="message"
                 placeholder="Type anything"
                 value={message}
-                onChange={onChangeMessage}
+                onChange={onChange}
                 onKeyPress={onKeyPress}
             />
             <button onClick={onClick}>Confirm</button>
